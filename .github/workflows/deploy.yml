@@ -1,0 +1,54 @@
+name: Deploy Vite site to Pages
+
+on:
+  # Roda a action toda vez que um push for feito na branch principal
+  push:
+    branches: ["main"]
+  # Permite que você rode essa action manualmente pela aba Actions do GitHub
+  workflow_dispatch:
+
+# Define as permissões necessárias para que a action consiga publicar as páginas
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite apenas 1 deploy concorrente por vez, cancelando processos antigos se houver novos pushes rápidos
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+        
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          
+      - name: Instalar dependências (npm)
+        run: npm ci
+        
+      - name: Build do Projeto (Vite)
+        run: npm run build
+        
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Fazer upload dos artefatos estáticos
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # O Vite salva os arquivos prontos na pasta 'dist' por padrão
+          path: "./dist"
+          
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

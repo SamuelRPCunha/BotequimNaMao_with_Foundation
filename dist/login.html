@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Botequim na Mão - Login</title>
+  <link rel="icon" href="/BotequimNaMao_with_Foundation/images/geral/header/logo_botequim_na_mao_1.png" type="image/png">
+  <script type="module" crossorigin src="/BotequimNaMao_with_Foundation/assets/app-BbmjCPTY.js"></script>
+  <link rel="stylesheet" crossorigin href="/BotequimNaMao_with_Foundation/assets/app-LtLJ9zE2.css">
+</head>
+<body style="background-color: #f8f9fa;">
+  <div id="page-login" class="grid-container flex-container align-middle align-center" style="min-height: 100vh; padding: 2rem; position: relative;">
+    
+    <!-- Acessibilidade Flutuante -->
+    <div style="position: absolute; top: 1rem; right: 1rem; z-index: 10;">
+      <ul class="menu" style="background-color: transparent;">
+        <li>
+          <button class="button clear secondary mb-0 btn-increase-font" title="Tamanho da Fonte" style="padding: 0.5rem; border: none; font-weight: bold; font-size: 1.1rem; color: #6c757d;" aria-label="Tamanho da Fonte">Aa</button>
+        </li>
+        <li>
+          <button class="button clear secondary mb-0 btn-toggle-theme" title="Alternar Tema Escuro" style="padding: 0.5rem; border: none; color: #6c757d;" aria-label="Alternar Tema">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- MODAL (Foundation Reveal) -->
+    <div class="reveal rounded-4 text-center" id="modal" data-reveal style="max-width: 400px; padding: 3rem;">
+      <p id="modal-msg" class="lead mb-4" style="font-size:1.25rem;"></p>
+      <button id="modal-btn" class="button primary rounded-pill px-4" data-close>OK</button>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- Login Box (Callout) -->
+    <div class="callout shadow-sm rounded-4" style="width: 100%; max-width: 400px; padding: 3rem 2rem; position: relative; border:none; background:#fff;">
+      <button onclick="window.history.back()"
+        class="button clear secondary rounded-circle position-absolute flex-container align-middle align-center p-0"
+        style="width: 40px; height: 40px; top: 1.5rem; left: 1.5rem; color: var(--primary-color); background-color: #f6f2f7; border: 1px solid #e6d1ea; margin:0;"
+        title="Voltar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5"></path><path d="M12 19L5 12L12 5"></path>
+        </svg>
+      </button>
+
+      <div class="text-center mb-4 mt-2">
+        <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="60" class="rounded-circle shadow-sm">
+      </div>
+
+      <h2 id="login-title" class="h4 fw-bold text-center mb-1 text-primary">Acesse sua conta</h2>
+      <p id="login-subtitle" class="text-muted text-center small mb-4" style="color: #6c757d;">Bem-vindo de volta! Por favor, insira seus dados.</p>
+
+      <form id="form-login">
+        <div class="mb-3" id="group-name" style="display: none; margin-bottom: 1rem;">
+          <label style="color: #6c757d; font-weight:bold; font-size: 0.85rem;">Nome completo
+            <input type="text" id="input-name" placeholder="Ex: Samuel Cunha" style="border-radius: 4px; margin-top:0.25rem;">
+          </label>
+        </div>
+
+        <div class="mb-3" style="margin-bottom: 1rem;">
+          <label style="color: #6c757d; font-weight:bold; font-size: 0.85rem;">E-mail
+            <input type="text" id="input-email" placeholder="exemplo@email.com" required style="border-radius: 4px; margin-top:0.25rem;">
+          </label>
+        </div>
+
+        <div class="mb-4" style="margin-bottom: 2rem;">
+          <label style="color: #6c757d; font-weight:bold; font-size: 0.85rem;">Senha
+            <input type="password" id="input-password" placeholder="********" required style="border-radius: 4px; margin-top:0.25rem;">
+          </label>
+        </div>
+
+        <button type="submit" id="btn-submit" class="button primary expanded fw-bold rounded-pill">Entrar</button>
+      </form>
+
+      <div class="text-center mt-4">
+        <p class="small text-muted mb-0" style="color: #6c757d;">
+          <span id="toggle-text">Não tem uma conta?</span>
+          <button id="toggle-btn" class="clear button tiny primary" style="margin:0; padding:0;">Cadastre-se</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

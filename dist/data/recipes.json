@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Caipirinha",
+    "description": "O clássico brasileiro com cachaça, limão e açúcar.",
+    "image": "images/page_cardapio/caipirinha.png",
+    "tags": ["Clássico", "Forte"],
+    "ingredientsNeeded": ["Cachaça", "Limão", "Açúcar", "Gelo"]
+  },
+  {
+    "id": 2,
+    "name": "Gin Tônica",
+    "description": "Refrescante e sofisticado, perfeito para dias quentes.",
+    "image": "images/page_cardapio/gin_tonica.png",
+    "tags": ["Refrescante", "Amargo"],
+    "ingredientsNeeded": ["Gin", "Água Tônica", "Limão", "Gelo"]
+  },
+  {
+    "id": 3,
+    "name": "Mojito",
+    "description": "O drink cubano favorito, com muito hortelã e rum.",
+    "image": "images/page_cardapio/mojito.png",
+    "tags": ["Tropical", "Doce"],
+    "ingredientsNeeded": ["Rum", "Hortelã", "Limão", "Açúcar", "Água com Gás"]
+  },
+  {
+    "id": 4,
+    "name": "Margarita",
+    "description": "Um clássico mexicano que equilibra acidez e salinidade.",
+    "image": "images/page_cardapio/margarita.png",
+    "tags": ["Clássico", "Forte", "Azedo"],
+    "ingredientsNeeded": ["Tequila", "Licor de Laranja", "Limão", "Sal", "Gelo"]
+  },
+  {
+    "id": 5,
+    "name": "Piña Colada",
+    "description": "O sabor do Caribe. Doce, cremoso e tropical.",
+    "image": "images/page_cardapio/pina_colada.png",
+    "tags": ["Tropical", "Doce"],
+    "ingredientsNeeded": ["Rum", "Suco de Abacaxi", "Leite de Coco", "Leite Condensado", "Gelo"]
+  },
+  {
+    "id": 6,
+    "name": "Negroni",
+    "description": "O rei dos aperitivos. Vermelho, amargo e inesquecível.",
+    "image": "images/page_cardapio/negroni.png",
+    "tags": ["Clássico", "Amargo", "Forte"],
+    "ingredientsNeeded": ["Gin", "Vermoute Rosso", "Campari", "Laranja", "Gelo"]
+  },
+  {
+    "id": 7,
+    "name": "Moscow Mule",
+    "description": "Refrescante com um toque picante de gengibre.",
+    "image": "images/page_cardapio/moscow_mule.png",
+    "tags": ["Refrescante", "Da Moda"],
+    "ingredientsNeeded": ["Vodka", "Limão", "Xarope de Gengibre", "Água com Gás", "Gelo"]
+  },
+  {
+    "id": 8,
+    "name": "Whisky Sour",
+    "description": "A harmonia perfeita entre o whisky e o limão.",
+    "image": "images/page_cardapio/whisky_sour.png",
+    "tags": ["Clássico", "Azedo", "Forte"],
+    "ingredientsNeeded": ["Whisky", "Limão", "Açúcar", "Gelo"]
+  },
+  {
+    "id": 9,
+    "name": "Cosmopolitan",
+    "description": "Famoso, frutado, elegante e moderno.",
+    "image": "images/page_cardapio/cosmopolitan.png",
+    "tags": ["Doce", "Frutado"],
+    "ingredientsNeeded": ["Vodka", "Licor de Laranja", "Suco de Cranberry", "Limão", "Gelo"]
+  }
+]

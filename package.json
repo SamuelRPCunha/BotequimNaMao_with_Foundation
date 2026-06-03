@@ -1,0 +1,19 @@
+{
+  "name": "botequimnamao_with_foundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.9.0",
+    "jquery": "^3.7.1",
+    "what-input": "^5.2.12"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

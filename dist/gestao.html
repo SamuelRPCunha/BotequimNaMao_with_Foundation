@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Botequim na Mão - Gestão</title>
+  <link rel="icon" href="/BotequimNaMao_with_Foundation/images/geral/header/logo_botequim_na_mao_1.png" type="image/png">
+  <script type="module" crossorigin src="/BotequimNaMao_with_Foundation/assets/app-BbmjCPTY.js"></script>
+  <link rel="stylesheet" crossorigin href="/BotequimNaMao_with_Foundation/assets/app-LtLJ9zE2.css">
+</head>
+
+<body id="page-gestao" style="background-color: #f8f9fa;">
+  <!-- HEADER -->
+  <div class="top-bar shadow-sm" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
+    <div class="grid-container flex-container align-middle flex-wrap" style="padding: 0.5rem 0; width: 100%;">
+      <div class="top-bar-left">
+        <ul class="menu align-middle" style="background-color: transparent;">
+          <li>
+            <a href="index.html" class="flex-container align-middle" style="display: flex; padding: 0; gap: 0.5rem;">
+              <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="50" class="rounded-circle">
+              <div class="show-for-medium">
+                <h1 class="h5 mb-0 text-primary fw-bold" style="margin:0; font-size: 1.25rem;">Botequim na Mão</h1>
+                <p class="small fw-bold mb-0" style="color: #dc3545; font-size: 0.8rem; margin:0;">Painel Administrativo
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-bar-right" style="margin-left: auto; display: flex; align-items: center;">
+        <ul class="menu" style="background-color: transparent; margin-right: 1rem;">
+          <li>
+            <button class="button clear secondary mb-0 btn-increase-font" title="Tamanho da Fonte"
+              style="padding: 0.5rem; border: none; font-weight: bold; font-size: 1.1rem;"
+              aria-label="Tamanho da Fonte">Aa</button>
+          </li>
+          <li>
+            <button class="button clear secondary mb-0 btn-toggle-theme" title="Alternar Tema Escuro"
+              style="padding: 0.5rem; border: none;" aria-label="Alternar Tema">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <ul class="menu align-right" id="navMenu" style="background-color: transparent; gap: 1rem;">
+          <!-- Injetado pelo JS -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main class="grid-container py-4" style="padding-top: 3rem; padding-bottom: 5rem;">
+    <h2 class="fw-bold mb-4 text-primary" style="margin-bottom: 2rem;">Gestão do Estabelecimento</h2>
+
+    <!-- TABS -->
+    <ul class="tabs mb-4" data-tabs id="gestao-tabs" style="border-bottom: 1px solid #e6e6e6;">
+      <li class="tabs-title is-active"><a href="#tab-drinks" aria-selected="true" class="fw-bold text-primary"
+          style="font-size:1.1rem; border:none; background:transparent;">🍹 Drinks</a></li>
+      <li class="tabs-title"><a href="#tab-orders" class="fw-bold text-primary"
+          style="font-size:1.1rem; border:none; background:transparent;">🧾 Pedidos</a></li>
+      <li class="tabs-title"><a href="#tab-stock" class="fw-bold text-primary"
+          style="font-size:1.1rem; border:none; background:transparent;">📦 Estoque</a></li>
+      <li class="tabs-title"><a href="#tab-config" class="fw-bold text-primary"
+          style="font-size:1.1rem; border:none; background:transparent;">⚙️ Configurações</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="gestao-tabs" style="border:none; background:transparent; padding:0;">
+
+      <!-- ABA DRINKS -->
+      <div class="tabs-panel is-active" id="tab-drinks">
+        <div class="callout shadow-sm rounded-4" style="background:#fff; border:1px solid #e6e6e6; padding: 2rem;">
+          <div class="grid-x grid-margin-x align-middle mb-4">
+            <div class="cell small-12 medium-auto">
+              <h3 class="h5 fw-bold mb-1 text-primary">Cardápio de Drinks</h3>
+              <p class="text-muted small mb-0">Gerencie as bebidas que aparecerão no site principal.</p>
+            </div>
+            <div class="cell small-12 medium-shrink text-right">
+              <button class="button primary fw-bold" data-open="modal-add-drink" style="margin:0;">+ Adicionar
+                Drink</button>
+            </div>
+          </div>
+          <div id="drinks-list-container" class="grid-y grid-margin-y">
+            <!-- Injetado via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ABA PEDIDOS -->
+      <div class="tabs-panel" id="tab-orders">
+        <div class="callout shadow-sm rounded-4" style="background:#fff; border:1px solid #e6e6e6; padding: 2rem;">
+          <h3 class="h5 fw-bold mb-1 text-primary">Gestão de Pedidos</h3>
+          <p class="text-muted small mb-4">Gerencie os pedidos em tempo real enviados pelos clientes.</p>
+          <div id="orders-container" class="grid-x grid-margin-x grid-margin-y">
+            <!-- Injetado via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ABA ESTOQUE -->
+      <div class="tabs-panel" id="tab-stock">
+        <div class="callout shadow-sm rounded-4" style="background:#fff; border:1px solid #e6e6e6; padding: 2rem;">
+          <h3 class="h5 fw-bold mb-1 text-primary">Disponibilidade de Ingredientes</h3>
+          <p class="text-muted small mb-4">Desative os ingredientes em falta. O sistema filtrará automaticamente as
+            bebidas impossíveis de preparar.</p>
+          <div id="stock-container" class="grid-y gap-2">
+            <!-- Injetado via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ABA CONFIGURAÇÕES -->
+      <div class="tabs-panel" id="tab-config">
+        <div class="grid-x grid-margin-x grid-margin-y">
+          <div class="cell small-12 medium-6">
+            <div class="callout shadow-sm rounded-4 h-100"
+              style="background:#fff; border:1px solid #e6e6e6; padding: 2rem;">
+              <h3 class="h5 fw-bold mb-1 text-primary">Trava de Emergência</h3>
+              <p class="text-muted small mb-4">Força o fechamento imediato do Botequim.</p>
+
+              <div class="flex-container align-justify align-middle p-3 rounded-4 bg-light"
+                style="border:1px solid #e6e6e6;">
+                <div>
+                  <span class="fw-bold fs-5 text-dark" id="label-status-bar">Funcionamento Automático</span>
+                  <div class="small text-muted" id="desc-status-bar">O sistema abre e fecha de acordo com a tabela.
+                  </div>
+                </div>
+                <div class="switch large" style="margin-bottom:0;">
+                  <input class="switch-input" id="switch-status-bar" type="checkbox" checked>
+                  <label class="switch-paddle" for="switch-status-bar">
+                    <span class="show-for-sr">Status</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-12 medium-6">
+            <div class="callout shadow-sm rounded-4 h-100"
+              style="background:#fff; border:1px solid #e6e6e6; padding: 2rem;">
+              <h3 class="h5 fw-bold mb-1 text-primary">Horários de Funcionamento</h3>
+              <p class="text-muted small mb-4">Defina os horários de atendimento do local.</p>
+
+              <form id="form-business-hours">
+                <label class="fw-bold text-muted small mb-2">Dias de Funcionamento (Automação)</label>
+                <div class="flex-container flex-wrap" style="gap: 0.5rem; margin-bottom: 1.5rem;"
+                  id="input-days-checkboxes">
+                  <input type="checkbox" id="day-0" value="0"><label class="btn-circle-check" for="day-0">Dom</label>
+                  <input type="checkbox" id="day-1" value="1"><label class="btn-circle-check" for="day-1">Seg</label>
+                  <input type="checkbox" id="day-2" value="2"><label class="btn-circle-check" for="day-2">Ter</label>
+                  <input type="checkbox" id="day-3" value="3"><label class="btn-circle-check" for="day-3">Qua</label>
+                  <input type="checkbox" id="day-4" value="4"><label class="btn-circle-check" for="day-4">Qui</label>
+                  <input type="checkbox" id="day-5" value="5"><label class="btn-circle-check" for="day-5">Sex</label>
+                  <input type="checkbox" id="day-6" value="6"><label class="btn-circle-check" for="day-6">Sáb</label>
+                </div>
+
+                <label class="fw-bold text-muted small mb-1">Como vai aparecer no site para o cliente?
+                  <input type="text" id="input-days" placeholder="Ex: Terça a Domingo" required>
+                </label>
+
+                <div class="grid-x grid-margin-x mt-2 mb-4">
+                  <div class="cell small-6">
+                    <label class="fw-bold text-muted small">Abertura
+                      <input type="time" id="input-time-open" required>
+                    </label>
+                  </div>
+                  <div class="cell small-6">
+                    <label class="fw-bold text-muted small">Fechamento
+                      <input type="time" id="input-time-close" required>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="button primary expanded fw-bold rounded-pill">Salvar Configurações</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL ADD DRINK (Reveal) -->
+  <div class="reveal rounded-4" id="modal-add-drink" data-reveal style="max-width: 500px; padding: 2rem;">
+    <h3 class="fw-bold text-primary mb-4" style="margin-top:0;">Adicionar Novo Drink</h3>
+    <form id="form-add-drink">
+      <label class="fw-bold small text-muted">Nome do Drink
+        <input type="text" id="new-name" required placeholder="Ex: Caipirinha de Limão">
+      </label>
+      <label class="fw-bold small text-muted">Descrição
+        <textarea id="new-desc" rows="2" required placeholder="Descrição saborosa do drink..."></textarea>
+      </label>
+      <label class="fw-bold small text-muted">Ingredientes (separados por vírgula)
+        <input type="text" id="new-ingredients" required placeholder="Limão, Cachaça, Açúcar, Gelo">
+      </label>
+      <label class="fw-bold small text-muted mb-4">Imagem do Drink
+        <input type="file" id="new-image" accept="image/*">
+      </label>
+      <button type="submit" class="button primary expanded fw-bold rounded-pill">Salvar Drink no Sistema</button>
+    </form>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+</body>
+
+</html>

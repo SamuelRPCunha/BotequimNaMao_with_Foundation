@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Botequim na Mão - Cardápio</title>
+  <link rel="icon" href="/BotequimNaMao_with_Foundation/images/geral/header/logo_botequim_na_mao_1.png" type="image/png">
+  <script type="module" crossorigin src="/BotequimNaMao_with_Foundation/assets/app-BbmjCPTY.js"></script>
+  <link rel="stylesheet" crossorigin href="/BotequimNaMao_with_Foundation/assets/app-LtLJ9zE2.css">
+</head>
+
+<body>
+  <!-- HEADER - TOP BAR -->
+  <div class="top-bar shadow-sm" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
+    <div class="grid-container flex-container align-middle" style="padding: 0.5rem 0; width: 100%; flex-wrap: nowrap;">
+
+      <!-- LADO ESQUERDO -->
+      <div class="top-bar-left" style="flex: 0 0 auto;">
+        <ul class="menu align-middle" style="background-color: transparent;">
+          <li>
+            <a href="index.html" class="flex-container align-middle" style="display: flex; padding: 0; gap: 0.5rem;">
+              <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="50" class="rounded-circle">
+              <div class="show-for-medium">
+                <h1 class="h5 mb-0 text-primary fw-bold" style="margin:0; font-size: 1.25rem;">Botequim na Mão</h1>
+                <p class="text-muted mb-0" style="margin:0; font-size: 0.8rem; color: #6c757d;">Seu cardápio inteligente
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- BUSCA CENTRALIZADA (Desktop) - Flex Center -->
+      <div class="show-for-large" style="flex: 1 1 auto; display: flex; justify-content: center; padding: 0 1rem;">
+        <div class="input-group" style="justify-content: center; margin-bottom: 0; width: 100%; max-width: 500px;">
+          <input class="input-group-field" type="search" id="input-busca" name="search" autocomplete="off"
+            placeholder="Pesquisar drink...">
+          <div class="input-group-button">
+            <button type="button" id="btn-toggle-filtro" class="button secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO -->
+      <div class="top-bar-right" style="flex: 0 0 auto; display: flex; justify-content: flex-end;">
+        <ul class="menu align-right" style="background-color: transparent; gap: 0.5rem; flex-wrap: nowrap; align-items: center;">
+          <!-- Acessibilidade -->
+          <li>
+            <button class="button clear secondary mb-0 btn-increase-font" title="Tamanho da Fonte" style="padding: 0.5rem; border: none; font-weight: bold; font-size: 1.1rem;" aria-label="Tamanho da Fonte">Aa</button>
+          </li>
+          <li>
+            <button class="button clear secondary mb-0 btn-toggle-theme" title="Alternar Tema Escuro" style="padding: 0.5rem; border: none;" aria-label="Alternar Tema">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </li>
+          <li><a href="index.html" class="button hollow primary" style="margin-bottom:0;">Home</a></li>
+          <li><a href="sobre.html" class="button hollow primary show-for-medium" style="margin-bottom:0;">O Botequim</a>
+          </li>
+          <li><a href="login.html" class="button primary" style="margin-bottom:0;">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- BUSCA CENTRALIZADA (Mobile - Cai para a linha de baixo do header) -->
+      <div class="hide-for-large" style="margin-top: 1rem; width: 100%;">
+        <div class="input-group" style="margin-bottom: 0;">
+          <input class="input-group-field" type="search" id="input-busca-mobile" name="search" autocomplete="off"
+            placeholder="Pesquisar drink...">
+          <div class="input-group-button">
+            <button type="button" id="btn-toggle-filtro-mobile" class="button secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="page-cardapio">
+    <!-- ÁREA DE FILTROS -->
+    <div id="area-filtro" style="display: none; background: #fff; padding: 2rem 0; border-bottom: 1px solid #e6e6e6;">
+      <div class="grid-container">
+        <h3 class="h5 fw-bold">Filtrar por ingredientes</h3>
+        <p class="text-muted small mb-3">Selecione os ingredientes que você deseja na sua bebida:</p>
+        <div id="lista-ingredientes" class="flex-container flex-wrap" style="margin-bottom: 1rem;"></div>
+        <button id="btn-limpar-filtros" class="clear button tiny secondary" style="margin-bottom:0;">Limpar
+          filtros</button>
+      </div>
+    </div>
+
+    <main class="grid-container" style="padding-top: 3rem; padding-bottom: 3rem; min-height: 60vh;">
+      <div id="cards-container" class="grid-x grid-margin-x grid-margin-y"></div>
+    </main>
+  </div>
+
+</body>
+
+</html>
