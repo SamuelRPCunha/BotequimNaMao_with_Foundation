@@ -9,14 +9,41 @@
 </head>
 
 <body>
+  <!-- TITLE BAR MOBILE -->
+  <div class="title-bar shadow-sm hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium" style="background-color: #fff; border-bottom: 1px solid #e6e6e6;">
+    <div class="title-bar-left" style="display: flex; align-items: center; gap: 0.5rem; padding-left: 0.5rem;">
+      <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="40" style="border-radius: 50%;">
+      <div class="title-bar-title text-primary fw-bold" style="margin: 0;">Botequim na Mão</div>
+    </div>
+    <div class="title-bar-right">
+      <button class="menu-icon dark" type="button" data-toggle="main-menu"></button>
+    </div>
+  </div>
+
+  <!-- BUSCA CENTRALIZADA (Mobile/Tablet - Sempre Visível) -->
+  <div class="hide-for-large shadow-sm" style="background-color: #fff; padding: 0.5rem 1rem; border-bottom: 1px solid #e6e6e6;">
+    <div class="input-group" style="margin-bottom: 0;">
+      <input class="input-group-field" type="search" id="input-busca-mobile" name="search" autocomplete="off"
+        placeholder="Pesquisar drink...">
+      <div class="input-group-button">
+        <button type="button" id="btn-toggle-filtro-mobile" class="button secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- HEADER - TOP BAR -->
-  <div class="top-bar shadow-sm" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
-    <div class="grid-container flex-container align-middle" style="padding: 0.5rem 0; width: 100%; flex-wrap: nowrap;">
+  <div class="top-bar shadow-sm" id="main-menu" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
+    <div class="grid-container flex-container align-middle" style="padding: 0.5rem 0; width: 100%; flex-wrap: wrap; justify-content: space-between;">
 
       <!-- LADO ESQUERDO -->
       <div class="top-bar-left" style="flex: 0 0 auto;">
         <ul class="menu align-middle" style="background-color: transparent;">
-          <li>
+          <li class="show-for-medium">
             <a href="index.html" class="flex-container align-middle" style="display: flex; padding: 0; gap: 0.5rem;">
               <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="50" class="rounded-circle">
               <div class="show-for-medium">
@@ -47,7 +74,7 @@
 
       <!-- LADO DIREITO -->
       <div class="top-bar-right" style="flex: 0 0 auto; display: flex; justify-content: flex-end;">
-        <ul class="menu align-right" style="background-color: transparent; gap: 0.5rem; flex-wrap: nowrap; align-items: center;">
+        <ul class="menu vertical medium-horizontal align-right" style="background-color: transparent; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
           <!-- Acessibilidade -->
           <li>
             <button class="button clear secondary mb-0 btn-increase-font" title="Tamanho da Fonte" style="padding: 0.5rem; border: none; font-weight: bold; font-size: 1.1rem;" aria-label="Tamanho da Fonte">Aa</button>
@@ -58,27 +85,13 @@
             </button>
           </li>
           <li><a href="index.html" class="button hollow primary" style="margin-bottom:0;">Home</a></li>
-          <li><a href="sobre.html" class="button hollow primary show-for-medium" style="margin-bottom:0;">O Botequim</a>
+          <li><a href="sobre.html" class="button hollow primary" style="margin-bottom:0;">O Botequim</a>
           </li>
           <li><a href="login.html" class="button primary" style="margin-bottom:0;">Login</a></li>
         </ul>
       </div>
 
-      <!-- BUSCA CENTRALIZADA (Mobile - Cai para a linha de baixo do header) -->
-      <div class="hide-for-large" style="margin-top: 1rem; width: 100%;">
-        <div class="input-group" style="margin-bottom: 0;">
-          <input class="input-group-field" type="search" id="input-busca-mobile" name="search" autocomplete="off"
-            placeholder="Pesquisar drink...">
-          <div class="input-group-button">
-            <button type="button" id="btn-toggle-filtro-mobile" class="button secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+
 
     </div>
   </div>

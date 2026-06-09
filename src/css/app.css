@@ -127,8 +127,11 @@ input[type="checkbox"]:hover + .btn-circle-check {
 /* Helpers nativos adicionados via CSS customizado ou Foundation Prototype seriam aqui, mas vamos usar o padrão do Foundation no HTML. */
 
 /* Responsive Adjustments */
+.hero-title { font-size: 3rem; }
+
 @media screen and (max-width: 639px) {
   .hero-section { height: 50vh !important; }
+  .hero-title { font-size: 2rem !important; }
 }
 
 /* ======================================================== */

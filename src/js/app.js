@@ -105,7 +105,8 @@ function initHeader() {
       statusBanner.innerHTML = `🔴 Botequim Fechado no momento.${hoursText}`;
     }
 
-    header.parentNode.insertBefore(statusBanner, header);
+    const targetElement = document.querySelector('.title-bar') || header;
+    targetElement.parentNode.insertBefore(statusBanner, targetElement);
   }
 }
 

@@ -10,12 +10,23 @@
 </head>
 
 <body>
+  <!-- TITLE BAR MOBILE -->
+  <div class="title-bar shadow-sm hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium" style="background-color: #fff; border-bottom: 1px solid #e6e6e6;">
+    <div class="title-bar-left" style="display: flex; align-items: center; gap: 0.5rem; padding-left: 0.5rem;">
+      <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="40" style="border-radius: 50%;">
+      <div class="title-bar-title text-primary fw-bold" style="margin: 0;">Botequim na Mão</div>
+    </div>
+    <div class="title-bar-right">
+      <button class="menu-icon dark" type="button" data-toggle="main-menu"></button>
+    </div>
+  </div>
+
   <!-- HEADER - TOP BAR FOUNDATION -->
-  <div class="top-bar shadow-sm" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
-    <div class="grid-container flex-container align-middle flex-wrap" style="padding: 0.5rem 0; width: 100%;">
-      <div class="top-bar-left">
+  <div class="top-bar shadow-sm" id="main-menu" style="background-color: #fff; border-bottom: 1px solid #e6e6e6; min-height: 70px;">
+    <div class="grid-container flex-container align-middle flex-wrap" style="padding: 0.5rem 0; width: 100%; justify-content: space-between;">
+      <div class="top-bar-left" style="flex: 0 0 auto;">
         <ul class="menu align-middle" style="background-color: transparent;">
-          <li>
+          <li class="show-for-medium">
             <a href="index.html" class="flex-container align-middle" style="display: flex; padding: 0; gap: 0.5rem;">
               <img src="./images/geral/header/logo_botequim_na_mao_1.png" alt="Logo" width="50"
                 style="border-radius: 50%;">
@@ -28,8 +39,8 @@
           </li>
         </ul>
       </div>
-      <div class="top-bar-right" style="margin-left: auto;">
-        <ul class="menu align-right" style="background-color: transparent; gap: 1rem;">
+      <div class="top-bar-right" style="flex: 0 0 auto; display: flex; justify-content: flex-end;">
+        <ul class="menu vertical medium-horizontal align-right" style="background-color: transparent; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
           <!-- Acessibilidade -->
           <li>
             <button class="button clear secondary mb-0 btn-increase-font" title="Tamanho da Fonte" style="padding: 0.5rem; border: none; font-weight: bold; font-size: 1.1rem;" aria-label="Tamanho da Fonte">Aa</button>
@@ -40,7 +51,7 @@
             </button>
           </li>
           <li><a href="cardapio.html" class="button hollow primary" style="margin-bottom: 0;">Cardápio</a></li>
-          <li><a href="sobre.html" class="button hollow primary show-for-medium" style="margin-bottom: 0;">O
+          <li><a href="sobre.html" class="button hollow primary" style="margin-bottom: 0;">O
               Botequim</a></li>
           <li><a href="login.html" class="button primary" style="margin-bottom: 0;">Login</a></li>
         </ul>
@@ -53,7 +64,7 @@
     <div class="hero-section text-center flex-container align-middle align-center"
       style="height: 60vh; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/page_principal/fundo.png'); background-size: cover; background-position: center; color: white;">
       <div class="grid-container">
-        <h1 class="fw-bold mb-3" style="font-size: 3rem; font-weight: bold;">Nunca mais peça um drink em falta.</h1>
+        <h1 class="fw-bold mb-3 hero-title" style="font-weight: bold;">Nunca mais peça um drink em falta.</h1>
         <p class="lead mb-4" style="font-size: 1.25rem; margin-bottom: 2rem;">O Botequim na Mão conecta o estoque do bar
           com o seu desejo. Veja apenas o que pode ser feito agora.</p>
         <a href="cardapio.html" class="button primary large" style="padding: 1rem 3rem; border-radius: 50rem;">Ver
